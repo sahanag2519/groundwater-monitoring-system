@@ -506,7 +506,31 @@ groundwater-monitoring-system/
 ```
 
 ---
+# AI-Based Groundwater Prediction
 
+The system uses historical groundwater-level measurements collected from the
+monitoring setup to identify groundwater-level trends and estimate future
+groundwater conditions.
+
+The prediction module works with the recorded sensor data and provides an
+additional decision-support layer beyond real-time monitoring.
+
+### Prediction Workflow
+
+```text
+Historical Groundwater Data
+          ↓
+Data Processing
+          ↓
+Trend Analysis
+          ↓
+AI Prediction Model
+          ↓
+Predicted Groundwater Level
+          ↓
+Dashboard Visualization
+```
+---
 # Demonstration
 
 The working prototype demonstrates:
@@ -772,32 +796,6 @@ This project was developed collaboratively by:
 | **Sahana G** | Team Member |
 | **Venkata Sai Deekshitha Darsi** | Team Member |
 ---
-# Team
-
-### Team Members
-
-**Sanjana N** — Team Leader  
-- ESP32 and hardware integration
-- Sensor interfacing
-- Wi-Fi and Flask communication
-- System integration and testing
-
-**Sahana G** — Team Member  
-- Flask backend and dashboard development
-- Database integration
-- Data visualization
-- Hardware testing and documentation
-
-**Venkata Sai Deekshitha Darsi** — Team Member  
-- Data analysis
-- AI-based groundwater-level prediction
-- Alert/status logic
-- Testing and project documentation
-
-The project was developed collaboratively, with all three team members
-contributing to the hardware prototype, software integration, testing and
-documentation.
----
 
 ### Team Contribution
 
@@ -814,13 +812,22 @@ The team collaboratively worked on:
 - Data handling and analysis
 - Testing and validation
 - Documentation and project presentation
+- AI prediction
 
 ---
 
 ## Project Highlights
 
-> **An affordable IoT-based prototype for real-time groundwater monitoring,
-> local alerts, and digital data visualization.**
+- Real-time groundwater-level monitoring using ESP32 and ultrasonic sensing
+- TDS-based water-quality monitoring
+- **AI-based groundwater-level prediction using historical sensor data**
+- Real-time Wi-Fi communication with Flask
+- Web-based monitoring dashboard
+- SQLite database for storing groundwater measurements
+- Local water-level alerts using White, Blue and Red LEDs
+- Audible TDS warning using an active buzzer
+- Data analysis and groundwater trend visualization
+  
 
 **ESP32 • IoT • Groundwater Monitoring • TDS • Ultrasonic Sensing • Flask •
 Python • Real-Time Dashboard • Data Analysis**
