@@ -831,4 +831,4 @@ The team collaboratively worked on:
   
 
 **ESP32 • IoT • Groundwater Monitoring • TDS • Ultrasonic Sensing • Flask •
-Python • Real-Time Dashboard • Data Analysis**
+Python • Real-Time Dashboard • Data Analysis •AI Prediction**
