@@ -13,6 +13,19 @@ The complete hardware prototype consisting of the ESP32,
 TDS sensor, ultrasonic water-level sensor, LEDs and buzzer.
 
 ---
+## Hardware Setup
+
+The hardware prototype consists of an ESP32-based monitoring unit integrated
+with a TDS sensor, ultrasonic water-level sensor, LED indicators and an
+active buzzer for local alerts.
+
+<p align="center">
+  <img src="./media/hardware_setup.jpeg" alt="Groundwater Monitoring System Hardware Setup" width="700">
+</p>
+
+<p align="center">
+  <i>Hardware prototype of the Groundwater Monitoring System</i>
+</p>
 
 ## Demonstration Videos
 
