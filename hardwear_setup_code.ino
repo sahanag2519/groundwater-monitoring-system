@@ -371,9 +371,9 @@ void loop()
 
     if (waterLevel >= 0)
     {
-        // Convert centimeters to metres
+        // Convert centimeters to metres by scaling
         float waterLevelMeters =
-            waterLevel / 100.0;
+            waterLevel ;
 
 
         sendData(
