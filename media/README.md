@@ -55,6 +55,14 @@ The dashboard displays:
 [▶ Watch Real-Time Dashboard on YouTube](https://youtu.be/41BdZGNdYzY)
 
 ---
+## Project Presentation
+
+The complete project presentation covering the problem statement, proposed
+system, hardware implementation, software architecture, results, and future
+scope is available below.
+
+[📑 View Project Presentation](media/Groundwater-Monitoring-System-Presentation.pptx)
+---
 
 # Hardware Pin Connections
 
