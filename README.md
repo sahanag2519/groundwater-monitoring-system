@@ -75,7 +75,58 @@ Local Alerts
 ```
 
 ---
+# System Architecture
 
+```text
+        ┌──────────────────────────────┐
+        │       Groundwater Source     │
+        │                              │
+        │  Water Level + Water Quality │
+        └──────────────┬───────────────┘
+                       │
+                       ▼
+        ┌──────────────────────────────┐
+        │            ESP32             │
+        │                              │
+        │  Ultrasonic Sensor           │
+        │  TDS Sensor                  │
+        └──────────────┬───────────────┘
+                       │
+                  Wi-Fi / HTTP
+                       │
+                       ▼
+        ┌──────────────────────────────┐
+        │        Flask Server          │
+        │                              │
+        │  Data Reception              │
+        │  Alert Evaluation            │
+        │  Data Analysis               │
+        │  AI Prediction               │
+        └──────────────┬───────────────┘
+                       │
+                       ▼
+        ┌──────────────────────────────┐
+        │       SQLite Database        │
+        │                              │
+        │ Village / Well / Level / TDS │
+        └──────────────┬───────────────┘
+                       │
+                       ▼
+        ┌──────────────────────────────┐
+        │       Web Dashboard          │
+        │                              │
+        │ Current Values               │
+        │ Status                       │
+        │ Historical Graphs            │
+        │ AI Prediction / Trend        │
+        └──────────────────────────────┘
+
+        Local Hardware Alerts
+             │          │
+             ▼          ▼
+          LEDs        Buzzer
+```
+---
 # Key Features
 
 ## 1. Real-Time Water-Level Monitoring
@@ -190,7 +241,18 @@ This provides a centralized interface for observing groundwater conditions.
 
 ---
 
-## 7. Data Storage and Analysis
+### 7. AI-Based Prediction
+
+The system analyzes previously recorded groundwater-level data to identify
+trends and estimate future groundwater-level conditions.
+
+The prediction module uses the collected historical measurements to support
+early identification of possible changes in groundwater availability.
+
+This provides an additional decision-support feature alongside real-time
+sensor monitoring.
+
+## 8. Data Storage and Analysis
 
 The project includes Python modules for data handling, analysis, database
 updates, prediction, and viewing stored measurements.
@@ -323,7 +385,14 @@ access to the monitoring dashboard.
 - Flask templates
 
 ---
+### AI / Data Analysis
 
+- Historical groundwater-level data analysis
+- AI-based groundwater-level prediction
+- Trend identification
+- Prediction visualization on the dashboard
+
+---  
 # System Data Flow
 
 ```text
@@ -501,6 +570,13 @@ Visit the [`media`](./media/) folder to view the complete demonstration
 materials.
 
 ---
+## Project Presentation
+
+The complete project presentation covering the problem statement, proposed
+system, hardware implementation, software architecture, results, and future
+scope is available below.
+
+[📑 View Project Presentation](media/Presentation.pptx)
 
 # Running the Project
 
@@ -677,7 +753,9 @@ The current prototype successfully demonstrates:
 - Stored readings are used for graphical analysis and trend estimation.
 - Local LEDs indicate the groundwater-level condition.
 - A buzzer provides an alert when the TDS value crosses the configured threshold.
-- Data handling and analysis modules
+- Data handling and analysis modules.
+- Historical measurements are analyzed to identify groundwater trends.
+- The prediction module estimates future groundwater-level trends from the available historical data.
 
 The system provides a foundation for future predictive analytics and smart
 water-distribution capabilities.
@@ -693,6 +771,33 @@ This project was developed collaboratively by:
 | **Sanjana N** | Team Leader |
 | **Sahana G** | Team Member |
 | **Venkata Sai Deekshitha Darsi** | Team Member |
+---
+# Team
+
+### Team Members
+
+**Sanjana N** — Team Leader  
+- ESP32 and hardware integration
+- Sensor interfacing
+- Wi-Fi and Flask communication
+- System integration and testing
+
+**Sahana G** — Team Member  
+- Flask backend and dashboard development
+- Database integration
+- Data visualization
+- Hardware testing and documentation
+
+**Venkata Sai Deekshitha Darsi** — Team Member  
+- Data analysis
+- AI-based groundwater-level prediction
+- Alert/status logic
+- Testing and project documentation
+
+The project was developed collaboratively, with all three team members
+contributing to the hardware prototype, software integration, testing and
+documentation.
+---
 
 ### Team Contribution
 
