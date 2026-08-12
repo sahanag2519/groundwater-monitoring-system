@@ -543,6 +543,7 @@ The working prototype demonstrates:
 - Flask backend
 - Real-time monitoring dashboard
 - Data handling and analysis
+- AI prediction
 
 All hardware images and demonstration videos are available in the
 [`media`](./media/) folder.
